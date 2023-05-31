@@ -24,7 +24,7 @@ class TimesRecordCreateController < ApplicationController
             redirect_to times_record_path
           rescue NoContentError, NoDurationError, NoDistanceError => e
             flash.now[:error] = e.message
-            render :new
+            render 'times_record/new'
         end
 
     end
