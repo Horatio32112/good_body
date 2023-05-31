@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Edit Times Fitness Record</title>
+<style>
+    body {
+        font: 14px Arial, sans-serif;
+        margin: 0px;
+    }
+    header {
+        padding: 10px 20px;
+        background: #ACB3B9;
+        text-align: center; 
+        position: relative;
+
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    .container {
+        width: 100%;
+        background: #F2F2F2;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 300px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        display: block;
+        padding: 10px 20px;
+        background-color: #ACB3B9;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+    .back-button {
+        margin-top: 20px;
+    }
+    .back-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ACB3B9;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit Times Fitness Record</h1>
+        </header>
+        <%= form_with(model: @times_record, url: update_times_record_path(@times_record.id), method: :patch) do |form| %>
+            <label for="contents">Contents</label>
+            <%= form.text_field :contents %>
+
+            <label for="duration">Duration (min)</label>
+            <%= form.number_field :duration %>
+
+            <label for="distance">Distance (m)</label>
+            <%= form.number_field :distance %>
+
+            <%= form.submit 'Save' %>
+        <% end %>
+
+        <% if flash[:error] %>
+            <p class="error-message"><%= flash[:error] %></p>
+        <% end %>
+        
+        <div class="back-button">
+            <%= link_to 'Back to Times Fitness Record', times_record_path %>
+        </div>
+    </div>
+</body>
+</html>

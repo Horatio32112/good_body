@@ -64,8 +64,10 @@
                 <ul>
                     <b>  <%= link_to 'Home', home_path, method: :get, class: 'home-link' %> </b> <br>
                     <%= link_to 'Personal Profile', personal_profile_path, method: :get, class: 'personal_profile-link' %>
-                    <li><a href="https://aftee.tw/"> My Sport Record </a></li>
-                    <li><a href="https://aftee.tw/"> Add New Record </a></li>
+                    <li><%= link_to 'My Sport Record(Sets)', home_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'My Sport Record(Times)', times_record_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'Add a Sets Record', home_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'Add a Times Record', create_times_record_path, method: :get, class: 'home-link' %></li>
                     <%= link_to 'Log out', logout_path, method: :get, class: 'logout-link' %>
                     <br>
                     <br>

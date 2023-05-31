@@ -104,3 +104,19 @@
 </body>
 </html>
 
+
+                <script>
+            function confirmAction(message) {
+                var result = confirm(message);
+                if (result) {
+                    // 如果使用者選擇確定，執行刪除操作
+                    return true;
+                } else {
+                    // 如果使用者選擇取消，停止刪除操作
+                    return false;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
