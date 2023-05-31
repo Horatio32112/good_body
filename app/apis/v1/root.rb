@@ -17,8 +17,7 @@ module V1
     mount V1::RecordSetsDeleteApi
     mount V1::RecordSetsViewApi
     mount V1::ViewUserRecordApi
-    mount V1::RecommendFollowerApi
-    mount V1::RecommendTxtApi
+#>>>>>>>>> Temporary merge branch 2
 
   end
 

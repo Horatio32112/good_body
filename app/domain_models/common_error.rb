@@ -1,15 +1,15 @@
 # User Login
 class NoUserError < StandardError
     def initialize(account_number)
-      msg = "There is no #{account_number} user."
-      super(msg)
+    msg = "There is no #{account_number} user."
+    super(msg)
     end
 end
-  
+
 class WrongPasswordError < StandardError
     def initialize
-      msg = "Password is wrong."
-      super(msg)
+    msg = "Password is wrong."
+    super(msg)
     end
 end
 
