@@ -9,6 +9,14 @@ module V1
     mount V1::TestApi
     mount V1::LoginApi
     mount V1::RegisterAccountApi
+    mount V1::RecordTimeCreateApi
+    mount V1::RecordTimeUpdateApi
+    mount V1::RecordTimeDeleteApi
+    mount V1::RecordSetsCreateApi
+    mount V1::RecordSetsUpdateApi
+    mount V1::RecordSetsDeleteApi
+    mount V1::RecordSetsViewApi
+    mount V1::ViewUserRecordApi
     mount V1::RecommendFollowerApi
     mount V1::RecommendTxtApi
 

@@ -102,4 +102,3 @@ RSpec.describe RegisterAccountUser do
 
   end
 end
-Footer

@@ -10,20 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_20_055827) do
+ActiveRecord::Schema.define(version: 2023_04_19_031204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "follow_status_records", force: :cascade do |t|
-    t.integer "subject_user_id"
-    t.string "action_type"
-    t.integer "object_user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sets_records", id: false, force: :cascade do |t|
+  create_table "sets_records", force: :cascade do |t|
     t.integer "user_id"
     t.string "contents"
     t.integer "sets"
@@ -41,16 +33,13 @@ ActiveRecord::Schema.define(version: 2023_04_20_055827) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "times_records", id: false, force: :cascade do |t|
+  create_table "times_records", force: :cascade do |t|
     t.integer "user_id"
     t.string "contents"
     t.integer "duration"
-    t.integer "distance"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
-  end
-
-  create_table "untitled_table", id: :integer, default: nil, force: :cascade do |t|
+    t.float "distance"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

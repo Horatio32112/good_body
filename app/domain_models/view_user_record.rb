@@ -1,4 +1,3 @@
-
 require_relative 'common_error'
 
 class ViewUserRecord
@@ -13,7 +12,7 @@ class ViewUserRecord
 
   def view
     records=[]
-    SetsRecords.where(user_id:user_id).each do |record|
+    SetsRecord.where(user_id:user_id).each do |record|
         records.append( [
             record.created_at,
             record.user_id, 
@@ -24,7 +23,7 @@ class ViewUserRecord
             ] )
     end
 
-    TimesRecords.where(user_id:user_id).each do |record|
+    TimesRecord.where(user_id:user_id).each do |record|
         records.append( [
             record.created_at,
             record.user_id, 
