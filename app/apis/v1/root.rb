@@ -9,6 +9,8 @@ module V1
     mount V1::TestApi
     mount V1::LoginApi
     mount V1::RegisterAccountApi
+    mount V1::GetPersonalProfileApi
+    mount V1::UpdatePersonalProfileApi
     mount V1::FollowApi
     mount V1::UnfollowApi
     mount V1::RecordTimeCreateApi

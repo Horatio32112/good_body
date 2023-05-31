@@ -3,12 +3,12 @@ Rails.application.routes.draw do
 
   mount EndpointResource => '/'
   post "view", to: "view_user_record#view"
-  get "home", to: "view_user_record#index"
+  #get "home", to: "view_user_record#index"
 
-  
+  #####
   root to: 'register_account#index'
   post '/submit' => 'register_account#submit'
-
+  #####
   get "create_account", to: "register_account#index"
 
   get "home", to: "register_account#show"

@@ -36,7 +36,6 @@ class RegisterAccountController < ApplicationController
     def update_action
         info_ident = InfoIdentification.new()
         user = User.find_by(account: session[:account] )
-
         if (user.nil?)   #testify the existance of the account
           #
         else  #personal info. delivery
@@ -45,7 +44,7 @@ class RegisterAccountController < ApplicationController
           age =    info_ident.age_testify(params[:age_modified].to_i)
           gender = params[:gender_modified]
           user.update!(height: height,weight: weight,age: age,gender: gender)
-          render :show
+          redirect_to personal_profile_path
         end
     end
 
