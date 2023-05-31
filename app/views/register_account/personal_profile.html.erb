@@ -62,10 +62,12 @@
         <div class="wrapper clearfix">
             <nav>
                 <ul>
-                    <%= link_to 'Home', home_path, method: :get, class: 'home-link' %><br>
-                    <b>  <%= link_to 'Personal Profile', personal_profile_path, method: :get, class: 'personal_profile-link' %> </b>
-                    <li><a href="https://aftee.tw/"> My Sport Record </a></li>
-                    <li><a href="https://aftee.tw/"> Add New Record </a></li>
+                    <%= link_to 'Home', home_path, method: :get, class: 'home-link' %>  <br>
+                    <b><%= link_to 'Personal Profile', personal_profile_path, method: :get, class: 'personal_profile-link' %></b>
+                    <li><%= link_to 'My Sport Record(Sets)', set_record_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'My Sport Record(Times)', times_record_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'Add a Sets Record', create_sets_record_path, method: :get, class: 'home-link' %></li>
+                    <li><%= link_to 'Add a Times Record', create_times_record_path, method: :get, class: 'home-link' %></li>
                     <%= link_to 'Log out', logout_path, method: :get, class: 'logout-link' %>
                     <br>
                     <br>

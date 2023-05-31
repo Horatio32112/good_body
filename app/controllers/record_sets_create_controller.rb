@@ -1,6 +1,6 @@
 require 'uri'
 require 'net/http'
-require_relative '../domain_models/common_error'
+#require_relative '../domain_models/common_error'
 
 class RecordSetsCreateController < ApplicationController
     def new
