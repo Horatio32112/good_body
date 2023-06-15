@@ -1,7 +1,13 @@
 class RecordSetRepository
 
     class << self
-  
+        
+        def get_sets_record(user_id)
+            SetsRecord.find_by(
+                user_id: user_id
+            )
+        end
+
         def create_set_record(user_id, content, set, rep, weight)
             SetsRecord.create!(
                 user_id: user_id,

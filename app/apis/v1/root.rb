@@ -22,6 +22,8 @@ module V1
     #mount V1::RecordSetsViewApi
     mount V1::GetIdFromAccountApi
     mount V1::ViewUserRecordApi
+    mount V1::RecordTimesGetApi
+    mount V1::RecordSetsGetApi
 #>>>>>>>>> Temporary merge branch 2
 
   end
