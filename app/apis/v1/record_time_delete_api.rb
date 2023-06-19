@@ -12,6 +12,9 @@ module V1
                 record_time = RecordTimeDelete.new(params[:id])
                 
                 record_time.delete_time_record
+                return {
+                    Msg: 'time record deleted'
+                }
 
             end    
         end

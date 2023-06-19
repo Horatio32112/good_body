@@ -15,7 +15,9 @@ module V1
                 record_time = RecordTimeCreate.new(params[:user_id], params[:contents], params[:duration], params[:distance])
                 
                 record_time.create_time_record
-
+                return {
+                    Msg: 'times record created'
+                }
             end    
         end
     end        

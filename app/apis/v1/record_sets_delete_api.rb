@@ -12,6 +12,9 @@ module V1
         delete do
           record_function = RecordSetsDelete.new(params[:id])
           record_function.delete_set_record
+          return {
+            Msg: 'sets record deleted'
+          }
         end
       
       end

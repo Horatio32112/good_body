@@ -22,6 +22,9 @@ module V1
                 params[:weight]
             )
             record_function.create_set_record
+            return {
+                Msg: 'sets record created'
+            }
             end
         end
     end
