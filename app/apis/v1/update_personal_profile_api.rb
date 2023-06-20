@@ -22,7 +22,6 @@ module V1
                         height:user.height,
                         weight:user.weight,
                         age:user.age,
-                        name:user.name,
                         gender:user.gender
                         
                           

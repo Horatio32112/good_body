@@ -3,9 +3,11 @@ class RecordSetRepository
     class << self
         
         def get_sets_record(user_id)
-            SetsRecord.find_by(
+                        
+            a=SetsRecord.where(
                 user_id: user_id
             )
+            return a
         end
 
         def create_set_record(user_id, content, set, rep, weight)

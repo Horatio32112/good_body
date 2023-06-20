@@ -11,14 +11,15 @@ class RecordSetsGet
 
     def get_record()
         records=[]
-        RecordSetRepository.get_sets_record(user_id).each do |record|
+        RecordSetRepository.get_sets_record(@user_id).each do |record|
             records.append( [
-                record.created_at,
+                
                 record.user_id, 
                 record.contents, 
                 record.sets, 
                 record.reps, 
-                record.weight
+                record.weight,
+                record.created_at
                 ] )
         end
 
