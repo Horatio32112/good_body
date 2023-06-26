@@ -4,13 +4,13 @@ module V1
         resource :view_user_record do 
 
             params do
-                requires :user_account, type: String
+                requires :account, type: String
 
             end
 
             post do
 
-            user_record = ViewUserRecord.new(params[:user_account])
+            user_record = ViewUserRecord.new(params[:account])
                 
             record_hash={}
 

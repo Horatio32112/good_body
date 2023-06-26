@@ -32,14 +32,10 @@ class FollowStatusData
 
     def update_one_record(record)#從資料庫讀取下一筆紀錄，用以更新FollowStatusData       
         if record.action_type=="follow"
-            p record.subject_user_id
-            p record.object_user_id
-            p "ppppppp"
+        
             current_status[record.subject_user_id].append(record.object_user_id) 
             current_following[record.object_user_id].append(record.subject_user_id)
-            p record.subject_user_id
-            p record.object_user_id
-            p "0000000"
+            
         elsif record.action_type=="unfollow"
             current_status[record.subject_user_id].delete(record.object_user_id) 
             current_following[record.object_user_id].delete(record.subject_user_id)

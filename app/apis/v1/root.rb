@@ -24,6 +24,8 @@ module V1
     mount V1::ViewUserRecordApi
     mount V1::RecordTimesGetApi
     mount V1::RecordSetsGetApi
+    mount V1::RecommendFollowerApi
+    mount V1::RecommendTxtApi
 #>>>>>>>>> Temporary merge branch 2
 
   end

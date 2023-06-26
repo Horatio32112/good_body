@@ -12,8 +12,8 @@ module V1
         post do
   
           user=User.find_by(account:params[:account])
-
           return {user_id: user.id}
+
   
         end
   
