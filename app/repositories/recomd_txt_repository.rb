@@ -17,12 +17,14 @@ class RecomdTxtRepository
 
         for i in (0...num)
             outputlist.append( [
+                sets_table_of_userid[i].id,
                 sets_table_of_userid[i].created_at,
                 sets_table_of_userid[i].user_id, 
                 sets_table_of_userid[i].contents, 
                 sets_table_of_userid[i].sets, 
                 sets_table_of_userid[i].reps, 
-                sets_table_of_userid[i].weight
+                sets_table_of_userid[i].weight,
+                User.find_by(id:sets_table_of_userid[i].user_id).account
                 ] )
         end
             return outputlist   # [ created_at, user_id, contents, duation ]_i
@@ -44,10 +46,13 @@ class RecomdTxtRepository
             for i in (0...num) 
                     #p times_table_of_userid
                     outputlist.append([
+                    times_table_of_userid[i].id,
                     times_table_of_userid[i].created_at,
                     times_table_of_userid[i].user_id, 
                     times_table_of_userid[i].contents, 
                     times_table_of_userid[i].duration, 
+                    times_table_of_userid[i].distance, 
+                    User.find_by(id:times_table_of_userid[i].user_id).account
                     ] )
                 end
             return outputlist   # [ created_at, user_id, contents, duation ]_i

@@ -24,4 +24,32 @@ class RecommendTxt
         end
     end
 
+    def find_sets_txt_recommend (user_id, num = 3)
+        ############ find_txt_recommend ############
+        # find out the last num data in both of the table accroding to the follower of user_id
+        # input: userid: int ; num: int
+        # output: txtlist : arr(2),  [nothing] for no eligible case
+        ############################################
+        fsd = FollowStatusData.new()
+        rtr = RecomdTxtRepository.new()
+        friendlist = fsd.get_following(user_id)
+        txtlist = rtr.find_sets_table(friendlist, num)
+        txtlist = txtlist.sort
+        return txtlist
+        
+    end
+    
+    def find_times_txt_recommend (user_id, num = 3)
+        ############ find_txt_recommend ############
+        # find out the last num data in both of the table accroding to the follower of user_id
+        # input: userid: int ; num: int
+        # output: txtlist : arr(2),  [nothing] for no eligible case
+        ############################################
+        fsd = FollowStatusData.new()
+        rtr = RecomdTxtRepository.new()
+        friendlist = fsd.get_following(user_id)
+        txtlist = rtr.find_times_table(friendlist, num)
+        return txtlist = txtlist.sort
+        
+    end
 end
