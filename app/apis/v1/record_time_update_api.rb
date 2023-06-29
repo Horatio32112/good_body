@@ -11,7 +11,8 @@ module V1
             end
 
             put do
-
+                p params[:id]
+                p params[:contents]
                 record_time = RecordTimeUpdate.new(params[:id], params[:contents], params[:duration], params[:distance])
                 
                 record_time.update_time_record 

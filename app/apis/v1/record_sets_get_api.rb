@@ -24,7 +24,8 @@ module V1
                           sets:record[2], 
                           reps:record[3], 
                           weight:record[4],
-                          created_at:record[5]
+                          created_at:record[5],
+                          record_id:record[6]
                       }
         end
 

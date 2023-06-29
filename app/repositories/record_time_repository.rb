@@ -2,9 +2,10 @@ class RecordTimeRepository
     class << self
 
         def get_times_record(user_id)
-            TimesRecord.find_by(
+            a=TimesRecord.where(
                 user_id: user_id
             )
+            return a
         end
 
         def create(user_id, contents, duration, distance)

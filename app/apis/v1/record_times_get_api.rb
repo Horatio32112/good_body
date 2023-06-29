@@ -13,7 +13,7 @@ module V1
           record_function = RecordTimesGet.new(params[:account])
           records=record_function.get_record()
 
-          record_hash={}
+          record_hash=[]
 
           records.each_with_index do |record,i|
                     record_hash[i]={
@@ -21,10 +21,10 @@ module V1
                         user_id:record[1], 
                         contents:record[2], 
                         duration:record[3], 
-                        distance:record[4]
+                        distance:record[4],
+                        record_id:record[5]
                     }
         end
-
         return record_hash
       
       end

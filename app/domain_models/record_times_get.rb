@@ -1,6 +1,6 @@
 require_relative 'common_error'
 
-class RecordSetsGet
+class RecordTimesGet
 
     attr_accessor :account #, :user
 
@@ -12,13 +12,14 @@ class RecordSetsGet
     def get_record()
         
         records=[]
-        RecordTimesRepository.get_times_record(user_id).each do |record|
+        RecordTimeRepository.get_times_record(@user_id).each do |record|
             records.append( [
                 record.created_at,
                 record.user_id, 
                 record.contents, 
                 record.duration, 
                 record.distance,
+                record.id
                 ])
         end
 

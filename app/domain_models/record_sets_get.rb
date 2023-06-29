@@ -19,7 +19,8 @@ class RecordSetsGet
                 record.sets, 
                 record.reps, 
                 record.weight,
-                record.created_at
+                record.created_at,
+                record.id
                 ] )
         end
 
