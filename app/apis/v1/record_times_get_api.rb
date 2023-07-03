@@ -22,7 +22,8 @@ module V1
                         contents:record[2], 
                         duration:record[3], 
                         distance:record[4],
-                        record_id:record[5]
+                        record_id:record[5],
+                        account:record[6]
                     }
         end
         return record_hash

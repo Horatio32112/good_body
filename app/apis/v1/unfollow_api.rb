@@ -16,7 +16,7 @@ module V1
   
           unfollow_user.unfollow(params[:object_user_account])
   
-          return {context: params[:subject_user_account]+" has unfollowed "+params[:object_user_account]}
+          return {Msg: params[:subject_user_account]+" has unfollowed "+params[:object_user_account]}
         
         end
   

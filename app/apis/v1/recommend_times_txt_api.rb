@@ -10,11 +10,11 @@ module V1
             findtxt = RecommendTxt.new()
 
             times_txt=txt = findtxt.find_times_txt_recommend(params[:user_id])
-            record_hash={}
+            record_hash=[]
             times_txt.each_with_index do |record,i|
                     
                     record_hash[i]={
-                        id:record[0],
+                        record_id:record[0],
                         created_at:record[1],
                         user_id:record[2], 
                         contents:record[3], 

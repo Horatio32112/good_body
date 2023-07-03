@@ -1,8 +1,8 @@
 module V1
 
-    class FollowApi < Grape::API
+    class CheckFollowApi < Grape::API
   
-      resource :follow do
+      resource :check_follow do
   
   
         params do
@@ -14,9 +14,9 @@ module V1
   
           follow_user = FollowAndUnfollowUser.new(params[:subject_user_account])
   
-          follow_user.follow(params[:object_user_account])
-          
-          return {Msg: params[:subject_user_account]+" has followed "+params[:object_user_account]}
+          Msg=follow_user.check_follow(params[:object_user_account])
+        
+          return {Msg:Msg}
   
         end
   

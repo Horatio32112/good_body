@@ -23,9 +23,16 @@ class FollowAndUnfollowUser
         not_following!(object_user_id)
         succeed_to_create_record("unfollow",object_user_id)
     
-        
     end
     
+    def check_follow(object_user_account)
+        object_user_id=User.find_by(account: object_user_account).id
+        if follow_list.get_following.include?(object_user_id)
+            return "following"
+        end
+        return "not_following"
+    end
+
 private
     def cannot_follow_yourself!(object_user_id)
         raise SelfFollowingError.new(@subject_user_id,object_user_id) if @subject_user_id==object_user_id

@@ -20,7 +20,8 @@ class RecordSetsGet
                 record.reps, 
                 record.weight,
                 record.created_at,
-                record.id
+                record.id,
+                User.find_by(id:record.user_id).account
                 ] )
         end
 

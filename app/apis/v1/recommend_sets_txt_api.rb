@@ -9,11 +9,11 @@ module V1
         post do
             findtxt = RecommendTxt.new()
             sets_txt = findtxt.find_sets_txt_recommend(params[:user_id]) #arr(2)
-            record_hash={}
+            record_hash=[]
             sets_txt.each_with_index do |record,i|
                     
                     record_hash[i]={
-                        id:record[0],
+                        record_id:record[0],
                         created_at:record[1],
                         user_id:record[2], 
                         contents:record[3], 

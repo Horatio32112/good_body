@@ -19,7 +19,8 @@ class RecordTimesGet
                 record.contents, 
                 record.duration, 
                 record.distance,
-                record.id
+                record.id,
+                User.find_by(id:record.user_id).account
                 ])
         end
 
