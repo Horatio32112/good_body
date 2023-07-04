@@ -17,8 +17,6 @@ class InfoIdentification
         if age < 600 and age >  10
             return age
         else
-            p "LLL"
-            p age
             raise WrongWeight.new()
         end
     end

@@ -30,7 +30,7 @@ class RegisterAccountUser
         @password=crypt.encrypt_and_sign(@password)
 =end    
         User.create!(account:@account,password:@password,name:@name,phone_number:@phone_number,height:@height,weight:@weight,age:@age,email:@email,gender: @gender)
-        return {context:"success"}
+        return {Msg:"success"}
     end
 
     def required_info_left_blank!()

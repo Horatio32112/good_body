@@ -28,6 +28,7 @@ module V1
     mount V1::RecommendSetsTxtApi
     mount V1::RecommendTimesTxtApi
     mount V1::CheckFollowApi
+    mount V1::CheckUserExistenceApi
 #>>>>>>>>> Temporary merge branch 2
 
   end
