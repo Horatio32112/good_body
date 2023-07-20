@@ -14,7 +14,7 @@ module V1
                 user = User.find_by(account: params[:account])
                 if (user.nil?)   #testify the existance of the account
                     return {
-                        context: '帳戶不存在'
+                        Msg: '帳戶不存在'
                     }
                 else  #personal info. delivery
                     user.update!(height: params[:height],weight: params[:weight],age: params[:age],gender: params[:gender])

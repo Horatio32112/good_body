@@ -12,8 +12,8 @@ module V1
                     }
                 else  #personal info. delivery
                     return {
-                        height: user.weight,   ## temp setting ~/23
-                        weight: user.height,
+                        height: user.height,   ## temp setting ~/23
+                        weight: user.weight,
                         age: user.age,   ## temp setting ~/23
                         gender: user.gender
                     }
