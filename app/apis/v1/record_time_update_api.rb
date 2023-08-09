@@ -16,6 +16,7 @@ module V1
                 record_time = RecordTimeUpdate.new(params[:id], params[:contents], params[:duration], params[:distance])
                 
                 record_time.update_time_record 
+                {Msg:"success"}
 
             end    
         end

@@ -22,6 +22,7 @@ module V1
                     params[:weight]
                 )
                 record_function.update_set_record
+                {Msg:"success"}
             end
         
         end
